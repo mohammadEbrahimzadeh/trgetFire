@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0 , " /> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="cache-control" content="no-cache" />
+
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="stylesheet" href="src/css/base.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css
+  "
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js
+  "
+    ></script>
+    <!-- ------------------- -->
+
+    <!-- ----------------- -->
+    <script defer src="main.js"></script>
+    <title>نرم افزار بادخوانی</title>
+  </head>
+  <body>
+    <!-- circle -->
+    <div
+      class="bg-dark divHeader position-absolute flex-column p-sm-2 p-1 col-12 d-flex justify-content-center gap-2 w-100 align-items-center"
+    >
+      <div class="mb-1">
+        <h3 class="text-center text-white">نرم افزار بادخوانی</h3>
+      </div>
+      <div
+        class="col-12 d-flex flex-wrap align-items-end justify-content-center"
+      >
+        <div
+          class="d-flex col-12 flex-wrap col-sm-12 col-md-9 col-lg-7 align-items-center gap-3 gap-sm-3 gap-md-3 justify-content-center"
+        >
+          <div
+            class="col-9 col-sm-4 col-md-4 d-flex justify-content-center align-items-center"
+          >
+            <button
+              id="showModalTimeDelay"
+              class="btnForm col-12 p-2 p-md-1 text-warning"
+            >
+              سرعت ساچمه
+            </button>
+          </div>
+          <div
+            class="col-9 col-sm-3 col-md-3 d-flex justify-content-center align-items-center"
+          >
+            <button
+              id="showModalspeedWind"
+              class="btnForm col-12 p-2 p-md-1 text-warning"
+            >
+              سرعت باد
+            </button>
+          </div>
+          <div
+            class="col-9 col-sm-4 col-md-4 d-flex align-items-center justify-content-center"
+          >
+            <button
+              id="showModaldiagram"
+              class="btnForm col-12 p-2 p-md-1 text-warning"
+            >
+              جهت باد
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="col-sm-12 mt-3 col-md-3 col-12 gap-1 d-flex justify-content-evenly"
+        >
+          <div class="d-flex justify-content-center align-items-center col-6">
+            <select
+              id="siblSelect"
+              class="form-select text-white bg-secondary form-select-sm"
+              aria-label=".form-select-sm "
+            >
+              <option class="text-white option75100">سیبل</option>
+              <option class="text-white option75100" selected value="25m">
+                25m
+              </option>
+              <option class="text-white option75100" value="50m">
+                50m Airgun
+              </option>
+              <option class="text-white option75100" value="75y">
+                50m Rimfire
+              </option>
+              <option class="text-white option75100" value="100y">
+                75 &100 yard
+              </option>
+            </select>
+          </div>
+
+          <div class="d-flex justify-content-center align-items-center col-6">
+            <select
+              id="kalibrSelect"
+              class="form-select text-white bg-secondary form-select-sm"
+              aria-label=".form-select-sm "
+            >
+              <option class="text-white" selected>کالیبر</option>
+              <option class="text-white" value="4.5">4.5mm</option>
+              <option class="text-white" value="5.5">5.5mm</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- --------------- -->
+    <div
+      class="MinModal modalTimeDelay d-flex d-none justify-content-center align-items-center"
+    >
+      <div
+        class="col-11 col-sm-10 col-md-8 col-lg-6 col-xl-5 d-flex bg-dark p-3 align-items-center justify-content-center gap-3 flex-column calcMaindiv timedelayMaindiv"
+      >
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <h3 class="text-white text-center">تاخیر در زمان پرواز پرتابه</h3>
+        </div>
+        <div
+          class="calcMaindivMaincard p-3 col-12 col-sm-8 col-md-7 d-flex flex-column align-items-center justify-content-center gap-3"
+        >
+          <!-- -------------------- -->
+
+          <div class="container position-relative dropdown p-0 col-12">
+            <div
+              class="dropdown d-flex dropdown text-end justify-content-end align-items-end flex-column col-12"
+            >
+              <a
+                class="btn btn-secondary dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+              >
+                گزینه های پیش فرض
+              </a>
+              <ul
+                class="list-unstyled p-2 bg-primary ulMainMenu d-none mt-2 text-white"
+              >
+                <li class="liMenuitem p-sm-2 p-1">
+                  <p class="m-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-caret-left-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+                      />
+                    </svg>
+                    25m LV 16.2 Joule
+                  </p>
+
+                  <ul
+                    class="position-absolute text-start ulSubMenu d-flex flex-column gap-2 d-none ms-5 list-unstyled bg-primary mt-2 p-2 p-sm-2 text-white"
+                  >
+                    <li id="0.006711289283413274">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 8.44</p>
+                    </li>
+                    <li id="0.005128481969337073">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 10.34</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="liMenuitem p-sm-2 p-1">
+                  <p class="m-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-caret-left-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+                      />
+                    </svg>
+                    25m HV 27.12 Joule
+                  </p>
+
+                  <ul
+                    class="position-absolute text-start ulSubMenu d-flex flex-column gap-2 d-none ms-5 list-unstyled bg-primary mt-2 p-2 p-sm-2 text-white"
+                  >
+                    <li id="0.007037278256741997">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 8.44</p>
+                    </li>
+                    <li id="0.0050817006320979935">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 10.34</p>
+                    </li>
+                    <li id="0.004384133611691016">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 13.43</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="liMenuitem p-sm-2 p-1">
+                  <p class="m-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-caret-left-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+                      />
+                    </svg>
+                    50m 38 Joule
+                  </p>
+
+                  <ul
+                    class="position-absolute text-start ulSubMenu d-flex flex-column gap-2 d-none ms-5 list-unstyled bg-primary mt-2 p-2 p-sm-2 text-white"
+                  >
+                    <li id="0.017383714048999882">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 15.89</p>
+                    </li>
+                    <li id="0.01774188097732418">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 18.13</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="liMenuitem p-sm-2 p-1">
+                  <p class="m-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-caret-left-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+                      />
+                    </svg>
+                    50m 45 Joule
+                  </p>
+
+                  <ul
+                    class="position-absolute text-start ulSubMenu d-flex flex-column gap-2 d-none ms-5 list-unstyled bg-primary mt-2 p-2 p-sm-2 text-white"
+                  >
+                    <li id="0.017774392179267462">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 15.89</p>
+                    </li>
+                    <li id="0.01366934211909851">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 18.13</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="liMenuitem p-sm-2 p-1">
+                  <p class="m-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-caret-left-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+                      />
+                    </svg>
+                    75 Yards
+                  </p>
+
+                  <ul
+                    class="position-absolute text-start ulSubMenu d-flex flex-column gap-2 d-none ms-5 list-unstyled bg-primary mt-2 p-2 p-sm-2 text-white"
+                  >
+                    <li id="0.032042619542619555">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 15.89 45 joule</p>
+                    </li>
+                    <li id="0.032510292948588676">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 15.89 50 joule</p>
+                    </li>
+                    <li id="0.025688417443480105">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 18.13 55 joule</p>
+                    </li>
+                    <li id="0.023675115207373254">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 18.13 60 joule</p>
+                    </li>
+                    <li id="0.01326340528666714">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 25.39 65 joule</p>
+                    </li>
+                    <li id="0.013695720087472663">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 25.39 70 joule</p>
+                    </li>
+                    <li id="0.013952094414506705">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 25.39 75 joule</p>
+                    </li>
+                    <li id="0.01463675213675214">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 25.39 80 joule</p>
+                    </li>
+                    <li id="0.015220491727038765">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 25.39 85 joule</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="liMenuitem p-sm-2 p-1">
+                  <p class="m-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-caret-left-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+                      />
+                    </svg>
+                    100 Yards
+                  </p>
+
+                  <ul
+                    class="position-absolute text-start ulSubMenu d-flex flex-column gap-2 d-none ms-5 list-unstyled bg-primary mt-2 p-2 p-sm-2 text-white"
+                  >
+                    <li id="0.05469547579388534">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 15.89 45 joule</p>
+                    </li>
+                    <li id="0.0543592099219109">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 15.89 50 joule</p>
+                    </li>
+                    <li id="0.0436770213703459">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 18.13 55 joule</p>
+                    </li>
+                    <li id="0.04123576850094879">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 18. 13 60 joule</p>
+                    </li>
+                    <li id="0.022948652770716838">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 25.39 65 joule</p>
+                    </li>
+                    <li id="0.02382948720391792">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 25.39 70 joule</p>
+                    </li>
+                    <li id="0.02439017166415902">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 25.39 75 joule</p>
+                    </li>
+                    <li id="0.024991638795986593">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 25.39 80 joule</p>
+                    </li>
+                    <li id="0.025483179367531583">
+                      <p class="m-0 p-1 p-sm-2 col-12">JSB 25.39 85 joule</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- -------------------- -->
+          <input
+            id="v1"
+            type="text"
+            dir="rtl"
+            class="w-100 p-sm-2 p-1"
+            placeholder="
+سرعت پرتابه سر لوله (m/s)
+"
+          />
+          <input
+            id="v2"
+            type="text"
+            dir="rtl"
+            class="w-100 p-sm-2 p-1"
+            placeholder="
+سرعت در مسافت دوم (m/s)
+"
+          />
+          <input
+            dir="rtl"
+            id="m"
+            type="text"
+            class="w-100 p-sm-2 p-1"
+            placeholder="مسافت دوم"
+          />
+
+          <div class="divResultTimedelay border border-warning p-3 col-10">
+            <p id="elementresulttimedelay" class="text-center text-warning m-0">
+              مدت زمان تاخیر
+            </p>
+          </div>
+
+          <div class="d-flex col-12 justify-content-evenly align-items-center">
+            <!-- <div class="divResultTimedelay col-5 col-sm-4">
+              <button
+                id="cancleBtnSpeedFire"
+                class="text-center p-3 col-12 btnForm text-warning m-0"
+              >
+                لغو
+              </button>
+            </div> -->
+            <div
+              class="divResultTimedelay d-flex justify-content-center align-items-center col-5 col-sm-4"
+            >
+              <button
+                id="confirmation"
+                class="text-center p-3 col-12 btnForm text-warning m-0"
+              >
+                تایید
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------------------- -->
+    <div
+      class="MinModal modalspeedWind d-flex d-none justify-content-center align-items-center"
+    >
+      <div
+        class="col-11 col-sm-10 col-md-8 col-lg-6 col-xl-5 p-3 d-flex bg-dark align-items-center justify-content-center gap-3 flex-column calcMaindiv"
+      >
+        <div class="col-10 d-flex justify-content-center align-items-center">
+          <h3 class="text-white">سرعت باد</h3>
+        </div>
+        <div
+          class="calcMaindivMaincard p-3 col-12 col-sm-8 col-md-7 d-flex flex-column align-items-center justify-content-center gap-3"
+        >
+          <select
+            id="unitSelect"
+            class="form-select text-white w-75 col-4 bg-secondary form-select-sm"
+            aria-label=".form-select-sm "
+          >
+            <option class="text-white" selected>انتخاب واحد سرعت</option>
+            <option class="text-white" value="kh">k/h</option>
+            <option class="text-white" value="ms">m/s</option>
+          </select>
+
+          <input
+            dir="rtl"
+            id="driftInput"
+            type="text"
+            disabled
+            class="w-75 p-sm-2 p-1"
+            placeholder="سرعت باد"
+          />
+          <div class="divResultTimedelay divresult p-3 col-7">
+            <p
+              id="driftresultElm"
+              class="text-center border border-warning p-3 text-warning m-0"
+            >
+              نتیجه
+            </p>
+          </div>
+          <div class="d-flex col-12 justify-content-evenly align-items-center">
+            <!-- <div class="divResultTimedelay col-5 col-sm-4">
+              <button
+                id="cancleBtnSpeedWind"
+                class="text-center p-3 col-12 btnForm text-warning m-0"
+              >
+                لغو
+              </button>
+            </div> -->
+            <div
+              class="divResultTimedelay d-flex justify-content-center align-items-center col-5 col-sm-4"
+            >
+              <button
+                id="confirmationSpeedWind"
+                class="text-center p-3 col-12 btnForm text-warning m-0"
+              >
+                تایید
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- --------------- -->
+    <!-- ----------------------- -->
+    <div
+      class="MinModal modaldegree d-flex d-none justify-content-center align-items-center"
+    >
+      <div
+        class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 bg-dark p-3 d-flex align-items-center justify-content-center gap-3 flex-column calcMaindiv timedelayMaindiv"
+      >
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <h3 class="text-white text-center">جهت باد و مسیر انحراف ساچمه</h3>
+        </div>
+
+        <section class="sectionDegree col-12">
+          <div
+            class="mainDivDegree d-flex justify-content-center align-items-center"
+          >
+            <div class="circle-range d-flex position-relative">
+              <div class="info">0</div>
+              <p class="icon"></p>
+              <p class="topElmP"></p>
+              <p class="bottomElmP"></p>
+              <div class="ElmP1 labale"><p>1</p></div>
+              <div class="labalemini1-0 labalemini labale"></div>
+              <div class="ElmP1mini1 labalemini-main labale"></div>
+              <div class="labalemini1-2 labalemini labale"></div>
+              <div class="labalemini1-3 labalemini labale"></div>
+              <!-- ------------------ -->
+              <div class="ElmP2 labale"><p>2</p></div>
+              <div class="labalemini2-0 labalemini labale"></div>
+              <div class="ElmP1mini2 labalemini-main labale"></div>
+              <div class="labalemini2-2 labalemini labale"></div>
+              <!-- ----------- -->
+              <div class="ElmP3 labale"><p>3</p></div>
+              <div class="labalemini3-0 labalemini labale"></div>
+              <div class="ElmP1mini3 labalemini-main labale"></div>
+              <div class="labalemini3-2 labalemini labale"></div>
+              <!-- ---------------------- -->
+              <div class="ElmP4 labale"><p>4</p></div>
+              <div class="ElmP1mini4 labalemini labale"></div>
+              <div class="labalemini4-0 labalemini labale"></div>
+              <div class="ElmP1mini4 labalemini-main labale"></div>
+              <div class="labalemini4-2 labalemini labale"></div>
+              <!-- ---------------- -->
+              <div class="ElmP5 labale"><p>5</p></div>
+              <div class="ElmP1mini5 labalemini labale"></div>
+              <div class="labalemini5-0 labalemini labale"></div>
+              <div class="ElmP1mini5 labalemini-main labale"></div>
+              <div class="labalemini5-2 labalemini labale"></div>
+              <!-- ---------- -->
+              <div class="ElmP6 labale"><p>6</p></div>
+              <div class="labalemini6-0 labalemini labale"></div>
+              <div class="ElmP1mini6 labalemini-main labale"></div>
+              <div class="labalemini6-2 labalemini labale"></div>
+              <!-- ---------- -->
+              <div class="ElmP7 labale"><p>7</p></div>
+              <div class="labalemini7-0 labalemini labale"></div>
+              <div class="ElmP1mini7 labalemini-main labale"></div>
+              <div class="labalemini7-2 labalemini labale"></div>
+              <!-- ---------- -->
+              <div class="ElmP8 labale"><p>8</p></div>
+              <div class="labalemini8-0 labalemini labale"></div>
+              <div class="ElmP1mini8 labalemini-main labale"></div>
+              <div class="labalemini8-2 labalemini labale"></div>
+              <!-- ---------- -->
+              <div class="ElmP9 labale"><p>9</p></div>
+              <div class="labalemini9-0 labalemini labale"></div>
+              <div class="ElmP1mini9 labalemini-main labale"></div>
+              <div class="labalemini9-2 labalemini labale"></div>
+              <!-- ---------- -->
+              <div class="ElmP10 labale"><p>10</p></div>
+              <div class="labalemini10-0 labalemini labale"></div>
+              <div class="ElmP1mini10 labalemini-main labale"></div>
+              <div class="labalemini10-2 labalemini labale"></div>
+              <!-- ---------- -->
+              <div class="ElmP11 labale"><p>11</p></div>
+              <div class="labalemini11-0 labalemini labale"></div>
+              <div class="ElmP1mini11 labalemini-main labale"></div>
+              <div class="labalemini11-2 labalemini labale"></div>
+              <!-- ---------- -->
+              <div class="ElmP12 labale">
+                <p>12</p>
+              </div>
+              <div class="labalemini12-0 labalemini labale"></div>
+              <div class="ElmP1mini12 labalemini-main labale"></div>
+              <div class="labalemini12-2 labalemini labale"></div>
+            </div>
+          </div>
+        </section>
+        <div
+          class="divResultTimedelay d-flex justify-content-center align-items-center col-5 col-sm-4"
+        >
+          <button
+            id="confirmationDiagram"
+            class="text-center p-3 col-12 btnForm text-warning m-0"
+          >
+            تایید
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- --------------- -->
+    <div class="reticleCircle"><p class="m-0 reticleCircleElmp"></p></div>
+    <div class="position-relative w-100">
+      <div class="circle">
+        <img src="img/reticle.png" alt="" class="reticle" />
+      </div>
+    </div>
+
+    <div class="col-12 d-flex divImg justify-content-center align-items-center">
+      <img class="imgSibl" src="img/25m.png" alt="" />
+    </div>
+    <div
+      class="bg-dark text-white col-12 d-flex justify-content-center align-items-center p-3 footer"
+    >
+      <div class="divBtnFooter">
+        <button
+          id="BtnFooterShowModal"
+          class="btnForm col-12 p-1 p-md-1 text-warning"
+        >
+          بادنما
+        </button>
+      </div>
+      <h5>IRBR انجمن بنچ رست</h5>
+    </div>
+    <!-- ------------- modalFooter -->
+    <div
+      id="MinDivModalForFooter"
+      class="MinModal d-flex d-none justify-content-center align-items-center"
+    >
+      <div
+        class="col-11 MinModalFooter col-sm-9 col-md-7 col-lg-5 col-xl-5 p-3 d-flex bg-dark align-items-center justify--center gap-1 flex-column calcMaindiv"
+      >
+        <div
+          class="col-12 mb-5 d-flex justify-content-center align-items-center"
+        >
+          <h3 class="text-white text-center">
+            درصد تاثیر باد هر محدوده در کل انحراف
+          </h3>
+        </div>
+        <div
+          class="p-3 col-12 col-sm-12 col-md-12 d-flex flex-column align-items-center justify-content-center gap-3"
+        >
+          <div
+            class="d-flex col-12 gap-2 flex-wrap justify-content-evenly align-items-center"
+          >
+            <div
+              class="col-1 h-100 d-flex colOFModal flex-column justify-content-evenly align-items-center gap-3 col-sm-3 col-md-2"
+            >
+              <div
+                class="text-center d-flex align-items-center justify-content-center divNumberStep bg-primary"
+              >
+                <p
+                  id=""
+                  class="text-center d-flex align-items-center justify-content-center p-3 text-white m-0"
+                >
+                  5
+                </p>
+              </div>
+              <div
+                class="text-center d-flex align-items-center justify-content-center divNumberStep bg-primary"
+              >
+                <p
+                  id=""
+                  class="text-center d-flex align-items-center justify-content-center p-3 text-white m-0"
+                >
+                  4
+                </p>
+              </div>
+              <div
+                class="text-center d-flex align-items-center justify-content-center divNumberStep bg-primary"
+              >
+                <p
+                  id=""
+                  class="text-center d-flex align-items-center justify-content-center p-3 text-white m-0"
+                >
+                  3
+                </p>
+              </div>
+              <div
+                class="text-center d-flex align-items-center justify-content-center divNumberStep bg-primary"
+              >
+                <p
+                  id=""
+                  class="text-center d-flex align-items-center justify-content-center p-3 text-white m-0"
+                >
+                  2
+                </p>
+              </div>
+              <div
+                class="text-center d-flex align-items-center justify-content-center divNumberStep bg-primary"
+              >
+                <p
+                  id=""
+                  class="text-center d-flex align-items-center justify-content-center p-3 text-white m-0"
+                >
+                  1
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-1 h-100 col-sm-3 colOFModal d-flex flex-column justify-content-evenly ms-3 align-items-center col-md-2"
+            >
+              <div
+                class="divresult d-flex align-items-center justify-content-center text-center p-sm-3 col-12"
+              >
+                <p
+                  id=""
+                  class="labalePercentageDriftForSteps text-center d-flex align-items-center justify-content-center border border-warning p-4 text-warning m-0"
+                >
+                  نتیجه
+                </p>
+              </div>
+              <div
+                class="divresult d-flex align-items-center justify-content-center text-center p-sm-3 col-12"
+              >
+                <p
+                  id=""
+                  class="labalePercentageDriftForSteps text-center d-flex align-items-center justify-content-center border border-warning p-4 text-warning m-0"
+                >
+                  نتیجه
+                </p>
+              </div>
+              <div
+                class="divresult d-flex align-items-center justify-content-center text-center p-sm-3 col-12"
+              >
+                <p
+                  id=""
+                  class="labalePercentageDriftForSteps text-center d-flex align-items-center justify-content-center border border-warning p-4 text-warning m-0"
+                >
+                  نتیجه
+                </p>
+              </div>
+              <div
+                class="divresult d-flex align-items-center justify-content-center text-center p-sm-3 col-12"
+              >
+                <p
+                  id=""
+                  class="labalePercentageDriftForSteps text-center d-flex align-items-center justify-content-center border border-warning p-4 text-warning m-0"
+                >
+                  نتیجه
+                </p>
+              </div>
+              <div
+                class="divresult d-flex align-items-center justify-content-center text-center p-sm-3 col-12"
+              >
+                <p
+                  id=""
+                  class="labalePercentageDriftForSteps text-center d-flex align-items-center justify-content-center border border-warning p-4 text-warning m-0"
+                >
+                  نتیجه
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="mt-0 mt-sm-0 ms-3 ms-sm-1 col-4 h-100 col-sm-3 d-flex col-md-2"
+            >
+              <div class="position-relative">
+                <div
+                  class="position-relative h-100 d-flex flex-column justify-content-evenly gap-2"
+                >
+                  <div class="divresult text-center col-12">
+                    <img
+                      src="img/wnd-windflag-Copy.png"
+                      class="imgWindLine"
+                      alt=""
+                    />
+                  </div>
+                  <div class="divresult text-center col-12">
+                    <img
+                      src="img/wnd-windflag-Copy.png"
+                      class="imgWindLine"
+                      alt=""
+                    />
+                  </div>
+                  <div class="divresult text-center col-12">
+                    <img
+                      src="img/wnd-windflag-Copy.png"
+                      class="imgWindLine"
+                      alt=""
+                    />
+                  </div>
+                  <div class="divresult text-center col-12">
+                    <img
+                      src="img/wnd-windflag-Copy.png"
+                      class="imgWindLine"
+                      alt=""
+                    />
+                  </div>
+                  <div class="divresult text-center col-12">
+                    <img
+                      src="img/wnd-windflag-Copy.png"
+                      class="imgWindLine"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="lineStepsWind2 position-absolute start-50 h-100 top-0 d-flex justify-content-evenly align-items-center"
+                >
+                  <div id="" class="stepNumberLine w text-white">
+                    <p id="StepTow1Doted" class="bg-danger position-absolute">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-caret-up-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                        />
+                      </svg>
+                    </p>
+                    <p id="StepTow2Doted" class="bg-danger position-absolute">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-caret-up-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                        />
+                      </svg>
+                    </p>
+                    <p id="StepTow3Doted" class="bg-danger position-absolute">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-caret-up-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                        />
+                      </svg>
+                    </p>
+                    <p id="StepTow4Doted" class="bg-danger position-absolute">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-caret-up-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                        />
+                      </svg>
+                    </p>
+                    <p id="StepTow5Doted" class="bg-danger position-absolute">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-caret-up-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                        />
+                      </svg>
+                    </p>
+                    <p
+                      id="Bench"
+                      class="bg-success StepTowDoted position-absolute"
+                    >
+                      Bench
+                    </p>
+                    <p
+                      id=""
+                      class="bg-danger p-1 StepTowDotedTop position-absolute"
+                    >
+                      Target
+                    </p>
+                    <p
+                      id="Steplabale1"
+                      class="text-white steplabaleLine m-0 p-0 position-absolute"
+                    ></p>
+                    <p
+                      id="Steplabale2"
+                      class="text-white steplabaleLine m-0 position-absolute"
+                    ></p>
+                    <p
+                      id="Steplabale3"
+                      class="text-white steplabaleLine m-0 position-absolute"
+                    ></p>
+                    <p
+                      id="Steplabale4"
+                      class="text-white steplabaleLine m-0 position-absolute"
+                    ></p>
+                    <p
+                      id="Steplabale5"
+                      class="text-white steplabaleLine m-0 position-absolute"
+                    ></p>
+                    <p
+                      id="Steplabale6"
+                      class="text-white steplabaleLine m-0 position-absolute"
+                    ></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="d-flex divForBtnFooterModal col-10 col-sm-5 justify-content-evenly text-center align-items-center"
+          >
+            <!-- <div class="divResultTimedelay col-5 col-sm-4">
+            <button
+              id="cancleBtnSpeedWind"
+              class="text-center p-3 col-12 btnForm text-warning m-0"
+            >
+              لغو
+            </button>
+          </div> -->
+            <div
+              class="d-flex text-center justify-content-center align-items-center col-5 col-sm-4"
+            >
+              <button
+                id="btnAppcetModalFooter"
+                class="text-center p-1 p-sm-2 col-12 btnForm text-warning m-0"
+              >
+                تایید
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------- modalFooter -->
+  </body>
+</html>

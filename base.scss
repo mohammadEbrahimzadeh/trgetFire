@@ -1,0 +1,173 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+// :root {
+//   --x: green;
+// }
+body,
+html {
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.divHeader {
+  z-index: 11;
+}
+
+p {
+  font-size: var(--fontsm);
+}
+h1 {
+  font-size: var(--fontbold);
+}
+
+.circle {
+  position: absolute;
+  // top: 102%;
+  // left: 10%;
+  width: 400px;
+  height: 420px;
+  // top: 560%;
+  z-index: 8;
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+
+    top: -42%;
+  }
+}
+
+.reticleCircle {
+  position: absolute;
+  width: 12px;
+  top: 0;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .reticleCircleElmp {
+    display: none;
+    align-items: center;
+    z-index: 8;
+    rotate: 180deg;
+    width: 1px;
+    height: 0cm;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translate(-50%, -50%);
+    &::before {
+      content: "";
+      background-color: var(--color);
+      top: -50%;
+      // width: 2vw;
+      left: 0%;
+      border-radius: 50%;
+      // height: 2vw;
+      position: absolute;
+      // rotate: 0deg;
+      transform: translate(-50%, -50%);
+    }
+    &::after {
+      content: "";
+      background-color: red;
+      top: -48%;
+      // width: 0.5vw;
+      left: 80%;
+      border-radius: 50%;
+      // height: 0.5vw;
+      position: absolute;
+      // rotate: 0deg;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+.form-select {
+  background-color: aqua;
+  text-align: right;
+  direction: rtl;
+  width: 0%;
+  select {
+    width: 50px;
+  }
+  option {
+    width: 50px;
+  }
+}
+.footer {
+  position: absolute;
+  bottom: -1%;
+  z-index: 10;
+  h5 {
+    font-size: 0.7rem;
+  }
+}
+.divImg {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-color: aqua;
+  width: 10%;
+  // bottom: 45%;
+  height: 100%;
+  z-index: 0;
+  img {
+    position: absolute;
+
+    z-index: 1;
+  }
+}
+.btnBack {
+  font-size: var(--fontbold);
+  background-color: green;
+  color: white;
+  border-radius: 10%;
+  &:hover {
+    background-color: rgba(0, 128, 0, 0.568);
+  }
+}
+.btnForm {
+  border: 1px solid goldenrod;
+  background-color: rgb(39, 38, 38);
+  transition: 0.3s;
+  &:hover {
+    background-color: rgba(218, 165, 32, 0.274);
+  }
+}
+@media only screen and (min-width: 450px) {
+  :root {
+    --fontsm: 1.2rem;
+    --fontbold: 1.5vw;
+    --fontxl: 1px;
+  }
+}
+@import "degree/_main";
+@import "degree/_modal.scss";
+.ulMainMenu {
+  position: absolute;
+  top: 100%;
+  li {
+    &:hover {
+      background-color: rgb(8, 127, 255);
+      cursor: pointer;
+    }
+    ul {
+      // width: 30vw;
+      overflow-y: scroll;
+      height: 30vh;
+      // top: 0;
+      // right: 101%;
+      li {
+        &:hover {
+          background-color: rgb(8, 127, 255);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,859 @@
+@charset "UTF-8";
+
+@media only screen and (min-width: 250px) {
+  .divImg {
+    top: 18%;
+    img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  .reticleCircleElmp {
+    &::before {
+      content: "";
+      width: var(--widthKlibrSize);
+      height: var(--heightKlibrSize);
+    }
+    &::after {
+      content: "";
+      background-color: rgb(0, 0, 0);
+      // width: 2.5vw;
+      width: var(--widthSize);
+      // height: 2.5vw;
+      height: var(--heightSize);
+
+      // width: 2vw;
+      // height: 2vw;
+    }
+  }
+  .circle-range {
+    width: calc(150vw / 2.5);
+    height: calc(150vw / 2.5);
+  }
+  .labale {
+    height: 83%;
+  }
+  .ulMainMenu {
+    right: -20%;
+
+    li {
+      ul {
+        width: 80vw;
+        height: 30vh;
+
+        right: 0%;
+      }
+    }
+  }
+  .MinModalFooter {
+    height: 80vh;
+  }
+  .divNumberStep {
+    width: calc(30vw / 2.5);
+    height: calc(30vw / 2.5);
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  .imgWindLine {
+    width: 40%;
+    margin-left: -45px;
+  }
+  .lineStepsWind {
+    position: relative;
+    .stepNumberLine {
+      height: 10vw;
+      left: -4.75vw;
+
+      &::after {
+        right: -0.4vw;
+        // left: 30%;
+        width: calc(10vw / 2.5);
+        height: calc(10vw / 2.5);
+      }
+    }
+  }
+  // #Step1Doted {
+  //   top: 7%;
+  // }
+  // #Step2Doted {
+  //   top: 27%;
+  // }
+  // #Step3Doted {
+  //   top: 47%;
+  // }
+  // #Step4Doted {
+  //   top: 67%;
+  // }
+  // #Step5Doted {
+  //   top: 87%;
+  // }
+  .StepTowDoted {
+    bottom: -90px;
+    left: -38px;
+
+    padding: 15px;
+    padding-bottom: 35px;
+    font-size: 20px;
+  }
+  .StepTowDotedTop {
+    left: -23px;
+    top: -38px;
+  }
+  #StepTow1Doted {
+    bottom: 81%;
+    left: -4px;
+  }
+  #StepTow2Doted {
+    bottom: 61%;
+    left: -4px;
+  }
+  #StepTow3Doted {
+    bottom: 41%;
+    left: -4px;
+  }
+  #StepTow4Doted {
+    bottom: 22%;
+    left: -4px;
+  }
+  #StepTow5Doted {
+    bottom: 3%;
+    left: -4px;
+  }
+  // -------------
+  #Steplabale1 {
+    bottom: 95%;
+  }
+  #Steplabale2 {
+    bottom: 76%;
+  }
+  #Steplabale3 {
+    bottom: 56%;
+  }
+  #Steplabale4 {
+    bottom: 36%;
+  }
+  #Steplabale5 {
+    bottom: 16%;
+  }
+  #Steplabale6 {
+    top: 95%;
+  }
+  .labalePercentageDriftForSteps {
+    height: 50%;
+    width: 20%;
+  }
+}
+@media only screen and (min-width: 300px) {
+  .divImg {
+    top: 18%;
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .reticleCircleElmp {
+    &::before {
+      content: "";
+      width: var(--widthKlibrSize);
+      height: var(--heightKlibrSize);
+    }
+    &::after {
+      content: "";
+      background-color: rgb(0, 0, 0);
+      // width: 2.5vw;
+      width: var(--widthSize);
+      // height: 2.5vw;
+      height: var(--heightSize);
+
+      // width: 2vw;
+      // height: 2vw;
+    }
+  }
+  .circle-range {
+    width: calc(150vw / 2.2);
+    height: calc(150vw / 2.2);
+  }
+  .labale {
+    height: 75%;
+  }
+  .ulMainMenu {
+    right: -10%;
+
+    // li {
+    //   ul {
+    //     width: 80vw;
+    //     height: 30vh;
+    //     top: 605%;
+
+    //     right: 20%;
+    //   }
+    // }
+  }
+  .divNumberStep {
+    width: calc(30vw / 2.5);
+    height: calc(30vw / 2.5);
+    border-radius: 50%;
+    margin-right: 0px;
+  }
+  #StepTow1Doted {
+    bottom: 81%;
+    left: -4px;
+  }
+  #StepTow2Doted {
+    bottom: 61%;
+    left: -4px;
+  }
+  #StepTow3Doted {
+    bottom: 41%;
+    left: -4px;
+  }
+  #StepTow4Doted {
+    bottom: 22%;
+    left: -4px;
+  }
+  #StepTow5Doted {
+    bottom: 3%;
+    left: -4px;
+  }
+  .labalePercentageDriftForSteps {
+    height: 50%;
+  }
+  .imgWindLine {
+    width: 30%;
+    margin-left: -45px;
+  }
+  // #Steplabale1 {
+  //   top: 12px;
+  // }
+  // #Steplabale2 {
+  //   top: 19%;
+  // }
+  // #Steplabale3 {
+  //   top: 39%;
+  // }
+  // #Steplabale4 {
+  //   top: 58%;
+  // }
+  // #Steplabale5 {
+  //   top: 76%;
+  // }
+  // #Steplabale6 {
+  //   top: 96%;
+  // }
+}
+@media only screen and (min-width: 350px) {
+  .divImg {
+    top: 18%;
+    img {
+      width: 320px;
+      height: 320px;
+    }
+  }
+  .reticleCircleElmp {
+    &::before {
+      content: "";
+      width: var(--widthKlibrSize);
+      height: var(--heightKlibrSize);
+    }
+    &::after {
+      content: "";
+      background-color: rgb(0, 0, 0);
+      // width: 2.5vw;
+      width: var(--widthSize);
+      // height: 2.5vw;
+      height: var(--heightSize);
+
+      // width: 2vw;
+      // height: 2vw;
+    }
+  }
+  .circle-range {
+    width: calc(150vw / 2.2);
+    height: calc(150vw / 2.2);
+  }
+  .imgWindLine {
+    width: 30%;
+  }
+  .lineStepsWind {
+    position: relative;
+    .stepNumberLine {
+      height: 10vw;
+      left: -6.75vw;
+
+      &::after {
+        top: -10px;
+        right: -0.4vw;
+        // left: 30%;
+        width: calc(10vw / 2.5);
+        height: calc(10vw / 2.5);
+      }
+    }
+  }
+  #StepTow1Doted {
+    bottom: 82%;
+    left: -4px;
+  }
+  #StepTow2Doted {
+    bottom: 62%;
+    left: -4px;
+  }
+  #StepTow3Doted {
+    bottom: 42%;
+    left: -4px;
+  }
+  #StepTow4Doted {
+    bottom: 23%;
+    left: -4px;
+  }
+  #StepTow5Doted {
+    bottom: 3%;
+    left: -4px;
+  }
+}
+@media only screen and (min-width: 400px) {
+  .divImg {
+    top: 18%;
+    img {
+      width: 320px;
+      height: 320px;
+    }
+  }
+  .reticleCircleElmp {
+    &::before {
+      content: "";
+      width: var(--widthKlibrSize);
+      height: var(--heightKlibrSize);
+    }
+    &::after {
+      content: "";
+      background-color: rgb(0, 0, 0);
+      // width: 2.5vw;
+      width: var(--widthSize);
+      // height: 2.5vw;
+      height: var(--heightSize);
+
+      // width: 2vw;
+      // height: 2vw;
+    }
+  }
+  .circle-range {
+    width: calc(150vw / 2.5);
+    height: calc(150vw / 2.5);
+  }
+  .divNumberStep {
+    width: calc(30vw / 2.5);
+    height: calc(30vw / 2.5);
+    border-radius: 50%;
+  }
+  .imgWindLine {
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 450px) {
+  .divImg {
+    top: 18%;
+    img {
+      width: 320px;
+      height: 320px;
+    }
+  }
+  .reticleCircleElmp {
+    &::before {
+      content: "";
+      width: var(--widthKlibrSize);
+      height: var(--heightKlibrSize);
+    }
+    &::after {
+      content: "";
+      background-color: rgb(0, 0, 0);
+      // width: 2.5vw;
+      width: var(--widthSize);
+      // height: 2.5vw;
+      height: var(--heightSize);
+
+      // width: 2vw;
+      // height: 2vw;
+    }
+  }
+  .circle-range {
+    width: calc(150vw / 2.7);
+    height: calc(150vw / 2.7);
+  }
+  .lineStepsWind {
+    position: relative;
+    .stepNumberLine {
+      height: 10vw;
+      left: -5.75vw;
+
+      &::after {
+        top: -10px;
+        right: -0.4vw;
+        // left: 30%;
+        width: calc(10vw / 2.5);
+        height: calc(10vw / 2.5);
+      }
+    }
+  }
+
+  .StepTowDotedTop {
+    left: -25px;
+    top: -45px;
+  }
+}
+@media only screen and (min-width: 500px) {
+  .divImg {
+    top: 18%;
+    img {
+      width: 320px;
+      height: 320px;
+    }
+  }
+  .reticleCircleElmp {
+    &::before {
+      content: "";
+      width: var(--widthKlibrSize);
+      height: var(--heightKlibrSize);
+    }
+    &::after {
+      content: "";
+      background-color: rgb(0, 0, 0);
+      // width: 2.5vw;
+      width: var(--widthSize);
+      // height: 2.5vw;
+      height: var(--heightSize);
+
+      // width: 2vw;
+      // height: 2vw;
+    }
+  }
+  .circle-range {
+    width: calc(150vw / 3);
+    height: calc(150vw / 3);
+  }
+  .ulMainMenu {
+    li {
+      ul {
+        width: 50vw;
+        height: 30vh;
+
+        right: 0%;
+      }
+    }
+  }
+  #StepTow1Doted {
+    bottom: 83%;
+    left: -4px;
+  }
+  #StepTow2Doted {
+    bottom: 63%;
+    left: -4px;
+  }
+  #StepTow3Doted {
+    bottom: 43%;
+    left: -4px;
+  }
+  #StepTow4Doted {
+    bottom: 24%;
+    left: -4px;
+  }
+  #StepTow5Doted {
+    bottom: 3%;
+    left: -4px;
+  }
+  .imgWindLine {
+    width: 20%;
+  }
+  .StepTowDoted {
+    bottom: -105px;
+    left: -41px;
+
+    padding: 15px;
+    padding-bottom: 45px;
+    font-size: 23px;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .divImg {
+    top: 18%;
+    img {
+      width: 320px;
+      height: 320px;
+    }
+  }
+  .reticleCircleElmp {
+    &::before {
+      content: "";
+      width: var(--widthKlibrSize);
+      height: var(--heightKlibrSize);
+    }
+    &::after {
+      content: "";
+      background-color: rgb(0, 0, 0);
+      // width: 2.5vw;
+      width: var(--widthSize);
+      // height: 2.5vw;
+      height: var(--heightSize);
+
+      // width: 2vw;
+      // height: 2vw;
+    }
+  }
+  .circle-range {
+    width: calc(150vw / 3.3);
+    height: calc(150vw / 3.3);
+  }
+}
+@media only screen and (min-width: 575px) {
+  .divImg {
+    top: 10%;
+    img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  .reticleCircleElmp {
+    &::before {
+      content: "";
+      width: var(--widthKlibrSize);
+      height: var(--heightKlibrSize);
+    }
+    &::after {
+      content: "";
+      background-color: rgb(0, 0, 0);
+      // width: 2.5vw;
+      width: var(--widthSize);
+      // height: 2.5vw;
+      height: var(--heightSize);
+
+      // width: 2vw;
+      // height: 2vw;
+    }
+  }
+  .circle-range {
+    width: calc(150vw / 3.6);
+    height: calc(150vw / 3.6);
+  }
+  .ulMainMenu {
+    right: -40%;
+    li {
+      ul {
+        width: 150%;
+        height: 50vh;
+        right: 100%;
+        top: 1%;
+      }
+    }
+  }
+  .MinModalFooter {
+    height: 95vh;
+  }
+  .divNumberStep {
+    width: calc(20vw / 2.5);
+    height: calc(20vw / 2.5);
+    border-radius: 50%;
+  }
+  .imgWindLine {
+    width: 40%;
+    margin-left: -70px;
+  }
+  .lineStepsWind {
+    position: relative;
+    .stepNumberLine {
+      height: 5vw;
+      left: -3.75vw;
+
+      &::after {
+        top: -10px;
+        right: -0.5vw;
+        // left: 30%;
+        width: calc(7vw / 2.5);
+        height: calc(7vw / 2.5);
+      }
+    }
+  }
+  .colOFModal {
+    height: 100%;
+  }
+  #StepTow1Doted {
+    bottom: 84%;
+  }
+  #StepTow2Doted {
+    bottom: 64%;
+  }
+  #StepTow3Doted {
+    bottom: 44%;
+  }
+  #StepTow4Doted {
+    bottom: 24%;
+  }
+  #StepTow5Doted {
+    bottom: 5%;
+  }
+  .labalePercentageDriftForSteps {
+    height: 50%;
+    width: 75%;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .divImg {
+    top: 10%;
+    img {
+      width: 420px;
+      height: 420px;
+    }
+  }
+  .reticleCircleElmp {
+    &::before {
+      content: "";
+      width: var(--widthKlibrSize);
+      height: var(--heightKlibrSize);
+    }
+    &::after {
+      content: "";
+      background-color: rgb(0, 0, 0);
+      // width: 2.5vw;
+      width: var(--widthSize);
+      // height: 2.5vw;
+      height: var(--heightSize);
+
+      // width: 2vw;
+      // height: 2vw;
+    }
+  }
+  .circle-range {
+    width: calc(150vw / 3.8);
+    height: calc(150vw / 3.8);
+  }
+  .imgWindLine {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 763px) {
+  .divImg {
+    top: 5%;
+    img {
+      width: 420px;
+      height: 420px;
+    }
+  }
+  .reticleCircleElmp {
+    &::before {
+      content: "";
+      width: var(--widthKlibrSize);
+      height: var(--heightKlibrSize);
+    }
+    &::after {
+      content: "";
+      background-color: rgb(0, 0, 0);
+      // width: 2.5vw;
+      width: var(--widthSize);
+      // height: 2.5vw;
+      height: var(--heightSize);
+
+      // width: 2vw;
+      // height: 2vw;
+    }
+  }
+  .circle-range {
+    width: calc(150vw / 3.8);
+    height: calc(150vw / 3.8);
+  }
+  #Step1Doted {
+    top: 5%;
+  }
+  #Step2Doted {
+    top: 25%;
+  }
+  #Step3Doted {
+    top: 45%;
+  }
+  #Step4Doted {
+    top: 65%;
+  }
+  #Step5Doted {
+    top: 85%;
+  }
+
+  #StepTow1Doted {
+    bottom: 82%;
+  }
+  #StepTow2Doted {
+    bottom: 63%;
+  }
+  #StepTow3Doted {
+    bottom: 45%;
+  }
+  #StepTow4Doted {
+    bottom: 25%;
+  }
+  #StepTow5Doted {
+    bottom: 5%;
+  }
+  .imgWindLine {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .circle-range {
+    width: calc(150vw / 4);
+    height: calc(150vw / 4);
+  }
+  // #StepTow1Doted {
+  //   bottom: 85.5%;
+  // }
+  // #StepTow2Doted {
+  //   bottom: 65%;
+  // }
+  // #StepTow3Doted {
+  //   bottom: 45%;
+  // }
+  // #StepTow4Doted {
+  //   bottom: 25%;
+  // }
+  // #StepTow5Doted {
+  //   bottom: 5%;
+  // }
+}
+@media only screen and (min-width: 750px) {
+  .circle-range {
+    width: calc(150vw / 4.3);
+    height: calc(150vw / 4.3);
+  }
+  .lineStepsWind {
+    position: relative;
+    .stepNumberLine {
+      height: 5vw;
+      left: -3.5vw;
+
+      &::after {
+        top: -10px;
+        right: -0.5vw;
+        // left: 30%;
+        width: calc(5vw / 2.5);
+        height: calc(5vw / 2.5);
+      }
+    }
+  }
+}
+@media only screen and (min-width: 800px) {
+  .circle-range {
+    width: calc(150vw / 4.5);
+    height: calc(150vw / 4.5);
+  }
+}
+@media only screen and (min-width: 850px) {
+  .circle-range {
+    width: calc(150vw / 4.7);
+    height: calc(150vw / 4.7);
+  }
+}
+@media only screen and (min-width: 900px) {
+  .circle-range {
+    width: calc(150vw / 5);
+    height: calc(150vw / 5);
+  }
+  .lineStepsWind {
+    position: relative;
+    .stepNumberLine {
+      height: 5vw;
+      left: -2.75vw;
+
+      &::after {
+        top: -10px;
+        right: -0.5vw;
+        // left: 30%;
+        width: calc(5vw / 2.5);
+        height: calc(5vw / 2.5);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .circle-range {
+    width: calc(150vw / 5.3);
+    height: calc(150vw / 5.3);
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .circle-range {
+    width: calc(150vw / 5.5);
+    height: calc(150vw / 5.5);
+  }
+  #Steplabale1 {
+    top: 0%;
+  }
+  .imgWindLine {
+    width: 60%;
+  }
+  #StepTow1Doted {
+    bottom: 83%;
+  }
+  #StepTow2Doted {
+    bottom: 64%;
+  }
+  #StepTow3Doted {
+    bottom: 45%;
+  }
+  #StepTow4Doted {
+    bottom: 25%;
+  }
+  #StepTow5Doted {
+    bottom: 5%;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .circle-range {
+    width: calc(150vw / 5.8);
+    height: calc(150vw / 5.8);
+  }
+  .divNumberStep {
+    width: calc(15vw / 2.5);
+    height: calc(15vw / 2.5);
+    border-radius: 50%;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .circle-range {
+    width: calc(150vw / 6.1);
+    height: calc(150vw / 6.1);
+  }
+}
+@media only screen and (min-width: 1150px) {
+  .circle-range {
+    width: calc(150vw / 6.4);
+    height: calc(150vw / 6.4);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .circle-range {
+    width: calc(150vw / 6.7);
+    height: calc(150vw / 6.7);
+  }
+  .imgWindLine {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .circle-range {
+    width: calc(150vw / 7);
+    height: calc(150vw / 7);
+  }
+}
+@media only screen and (min-width: 1350px) {
+  .circle-range {
+    width: calc(150vw / 7.5);
+    height: calc(150vw / 7.5);
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .circle-range {
+    width: calc(150vw / 8);
+    height: calc(150vw / 8);
+  }
+  .imgWindLine {
+    width: 40%;
+  }
+}

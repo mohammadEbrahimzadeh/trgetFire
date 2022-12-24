@@ -1,0 +1,1477 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.divHeader {
+  z-index: 11;
+}
+
+p {
+  font-size: var(--fontsm);
+}
+
+h1 {
+  font-size: var(--fontbold);
+}
+
+.circle {
+  position: absolute;
+  width: 400px;
+  height: 420px;
+  z-index: 8;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  top: -42%;
+}
+
+.reticleCircle {
+  position: absolute;
+  width: 12px;
+  top: 0;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reticleCircle .reticleCircleElmp {
+  display: none;
+  align-items: center;
+  z-index: 8;
+  rotate: 180deg;
+  width: 1px;
+  height: 0cm;
+  position: relative;
+  justify-content: center;
+  align-items: flex-start;
+  transform: translate(-50%, -50%);
+}
+
+.reticleCircle .reticleCircleElmp::before {
+  content: "";
+  background-color: var(--color);
+  top: -50%;
+  left: 0%;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.reticleCircle .reticleCircleElmp::after {
+  content: "";
+  background-color: red;
+  top: -48%;
+  left: 80%;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.form-select {
+  background-color: aqua;
+  text-align: right;
+  direction: rtl;
+  width: 0%;
+}
+
+.form-select select {
+  width: 50px;
+}
+
+.form-select option {
+  width: 50px;
+}
+
+.footer {
+  position: absolute;
+  bottom: -1%;
+  z-index: 10;
+}
+
+.footer h5 {
+  font-size: 0.7rem;
+}
+
+.divImg {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 100%;
+  z-index: 0;
+}
+
+.divImg img {
+  position: absolute;
+  z-index: 1;
+}
+
+.btnBack {
+  font-size: var(--fontbold);
+  background-color: green;
+  color: white;
+  border-radius: 10%;
+}
+
+.btnBack:hover {
+  background-color: rgba(0, 128, 0, 0.568);
+}
+
+.btnForm {
+  border: 1px solid goldenrod;
+  background-color: #272626;
+  transition: 0.3s;
+}
+
+.btnForm:hover {
+  background-color: rgba(218, 165, 32, 0.274);
+}
+
+@media only screen and (min-width: 450px) {
+  :root {
+    --fontsm: 1.2rem;
+    --fontbold: 1.5vw;
+    --fontxl: 1px;
+  }
+}
+
+@media only screen and (min-width: 250px) {
+  .divImg {
+    top: 18%;
+  }
+  .divImg img {
+    width: 250px;
+    height: 250px;
+  }
+  .reticleCircleElmp::before {
+    content: "";
+    width: var(--widthKlibrSize);
+    height: var(--heightKlibrSize);
+  }
+  .reticleCircleElmp::after {
+    content: "";
+    background-color: black;
+    width: var(--widthSize);
+    height: var(--heightSize);
+  }
+  .circle-range {
+    width: calc(150vw / 2.5);
+    height: calc(150vw / 2.5);
+  }
+  .labale {
+    height: 83%;
+  }
+  .ulMainMenu {
+    right: -20%;
+  }
+  .ulMainMenu li ul {
+    width: 80vw;
+    height: 30vh;
+    right: 0%;
+  }
+  .MinModalFooter {
+    height: 80vh;
+  }
+  .divNumberStep {
+    width: calc(30vw / 2.5);
+    height: calc(30vw / 2.5);
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  .imgWindLine {
+    width: 40%;
+    margin-left: -45px;
+  }
+  .lineStepsWind {
+    position: relative;
+  }
+  .lineStepsWind .stepNumberLine {
+    height: 10vw;
+    left: -4.75vw;
+  }
+  .lineStepsWind .stepNumberLine::after {
+    right: -0.4vw;
+    width: calc(10vw / 2.5);
+    height: calc(10vw / 2.5);
+  }
+  .StepTowDoted {
+    bottom: -90px;
+    left: -38px;
+    padding: 15px;
+    padding-bottom: 35px;
+    font-size: 20px;
+  }
+  .StepTowDotedTop {
+    left: -23px;
+    top: -38px;
+  }
+  #StepTow1Doted {
+    bottom: 81%;
+    left: -4px;
+  }
+  #StepTow2Doted {
+    bottom: 61%;
+    left: -4px;
+  }
+  #StepTow3Doted {
+    bottom: 41%;
+    left: -4px;
+  }
+  #StepTow4Doted {
+    bottom: 22%;
+    left: -4px;
+  }
+  #StepTow5Doted {
+    bottom: 3%;
+    left: -4px;
+  }
+  #Steplabale1 {
+    bottom: 95%;
+  }
+  #Steplabale2 {
+    bottom: 76%;
+  }
+  #Steplabale3 {
+    bottom: 56%;
+  }
+  #Steplabale4 {
+    bottom: 36%;
+  }
+  #Steplabale5 {
+    bottom: 16%;
+  }
+  #Steplabale6 {
+    top: 95%;
+  }
+  .labalePercentageDriftForSteps {
+    height: 50%;
+    width: 20%;
+  }
+}
+
+@media only screen and (min-width: 300px) {
+  .divImg {
+    top: 18%;
+  }
+  .divImg img {
+    width: 300px;
+    height: 300px;
+  }
+  .reticleCircleElmp::before {
+    content: "";
+    width: var(--widthKlibrSize);
+    height: var(--heightKlibrSize);
+  }
+  .reticleCircleElmp::after {
+    content: "";
+    background-color: black;
+    width: var(--widthSize);
+    height: var(--heightSize);
+  }
+  .circle-range {
+    width: calc(150vw / 2.2);
+    height: calc(150vw / 2.2);
+  }
+  .labale {
+    height: 75%;
+  }
+  .ulMainMenu {
+    right: -10%;
+  }
+  .divNumberStep {
+    width: calc(30vw / 2.5);
+    height: calc(30vw / 2.5);
+    border-radius: 50%;
+    margin-right: 0px;
+  }
+  #StepTow1Doted {
+    bottom: 81%;
+    left: -4px;
+  }
+  #StepTow2Doted {
+    bottom: 61%;
+    left: -4px;
+  }
+  #StepTow3Doted {
+    bottom: 41%;
+    left: -4px;
+  }
+  #StepTow4Doted {
+    bottom: 22%;
+    left: -4px;
+  }
+  #StepTow5Doted {
+    bottom: 3%;
+    left: -4px;
+  }
+  .labalePercentageDriftForSteps {
+    height: 50%;
+  }
+  .imgWindLine {
+    width: 30%;
+    margin-left: -45px;
+  }
+}
+
+@media only screen and (min-width: 350px) {
+  .divImg {
+    top: 18%;
+  }
+  .divImg img {
+    width: 320px;
+    height: 320px;
+  }
+  .reticleCircleElmp::before {
+    content: "";
+    width: var(--widthKlibrSize);
+    height: var(--heightKlibrSize);
+  }
+  .reticleCircleElmp::after {
+    content: "";
+    background-color: black;
+    width: var(--widthSize);
+    height: var(--heightSize);
+  }
+  .circle-range {
+    width: calc(150vw / 2.2);
+    height: calc(150vw / 2.2);
+  }
+  .imgWindLine {
+    width: 30%;
+  }
+  .lineStepsWind {
+    position: relative;
+  }
+  .lineStepsWind .stepNumberLine {
+    height: 10vw;
+    left: -6.75vw;
+  }
+  .lineStepsWind .stepNumberLine::after {
+    top: -10px;
+    right: -0.4vw;
+    width: calc(10vw / 2.5);
+    height: calc(10vw / 2.5);
+  }
+  #StepTow1Doted {
+    bottom: 82%;
+    left: -4px;
+  }
+  #StepTow2Doted {
+    bottom: 62%;
+    left: -4px;
+  }
+  #StepTow3Doted {
+    bottom: 42%;
+    left: -4px;
+  }
+  #StepTow4Doted {
+    bottom: 23%;
+    left: -4px;
+  }
+  #StepTow5Doted {
+    bottom: 3%;
+    left: -4px;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .divImg {
+    top: 18%;
+  }
+  .divImg img {
+    width: 320px;
+    height: 320px;
+  }
+  .reticleCircleElmp::before {
+    content: "";
+    width: var(--widthKlibrSize);
+    height: var(--heightKlibrSize);
+  }
+  .reticleCircleElmp::after {
+    content: "";
+    background-color: black;
+    width: var(--widthSize);
+    height: var(--heightSize);
+  }
+  .circle-range {
+    width: calc(150vw / 2.5);
+    height: calc(150vw / 2.5);
+  }
+  .divNumberStep {
+    width: calc(30vw / 2.5);
+    height: calc(30vw / 2.5);
+    border-radius: 50%;
+  }
+  .imgWindLine {
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .divImg {
+    top: 18%;
+  }
+  .divImg img {
+    width: 320px;
+    height: 320px;
+  }
+  .reticleCircleElmp::before {
+    content: "";
+    width: var(--widthKlibrSize);
+    height: var(--heightKlibrSize);
+  }
+  .reticleCircleElmp::after {
+    content: "";
+    background-color: black;
+    width: var(--widthSize);
+    height: var(--heightSize);
+  }
+  .circle-range {
+    width: calc(150vw / 2.7);
+    height: calc(150vw / 2.7);
+  }
+  .lineStepsWind {
+    position: relative;
+  }
+  .lineStepsWind .stepNumberLine {
+    height: 10vw;
+    left: -5.75vw;
+  }
+  .lineStepsWind .stepNumberLine::after {
+    top: -10px;
+    right: -0.4vw;
+    width: calc(10vw / 2.5);
+    height: calc(10vw / 2.5);
+  }
+  .StepTowDotedTop {
+    left: -25px;
+    top: -45px;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .divImg {
+    top: 18%;
+  }
+  .divImg img {
+    width: 320px;
+    height: 320px;
+  }
+  .reticleCircleElmp::before {
+    content: "";
+    width: var(--widthKlibrSize);
+    height: var(--heightKlibrSize);
+  }
+  .reticleCircleElmp::after {
+    content: "";
+    background-color: black;
+    width: var(--widthSize);
+    height: var(--heightSize);
+  }
+  .circle-range {
+    width: calc(150vw / 3);
+    height: calc(150vw / 3);
+  }
+  .ulMainMenu li ul {
+    width: 50vw;
+    height: 30vh;
+    right: 0%;
+  }
+  #StepTow1Doted {
+    bottom: 83%;
+    left: -4px;
+  }
+  #StepTow2Doted {
+    bottom: 63%;
+    left: -4px;
+  }
+  #StepTow3Doted {
+    bottom: 43%;
+    left: -4px;
+  }
+  #StepTow4Doted {
+    bottom: 24%;
+    left: -4px;
+  }
+  #StepTow5Doted {
+    bottom: 3%;
+    left: -4px;
+  }
+  .imgWindLine {
+    width: 20%;
+  }
+  .StepTowDoted {
+    bottom: -105px;
+    left: -41px;
+    padding: 15px;
+    padding-bottom: 45px;
+    font-size: 23px;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .divImg {
+    top: 18%;
+  }
+  .divImg img {
+    width: 320px;
+    height: 320px;
+  }
+  .reticleCircleElmp::before {
+    content: "";
+    width: var(--widthKlibrSize);
+    height: var(--heightKlibrSize);
+  }
+  .reticleCircleElmp::after {
+    content: "";
+    background-color: black;
+    width: var(--widthSize);
+    height: var(--heightSize);
+  }
+  .circle-range {
+    width: calc(150vw / 3.3);
+    height: calc(150vw / 3.3);
+  }
+}
+
+@media only screen and (min-width: 575px) {
+  .divImg {
+    top: 10%;
+  }
+  .divImg img {
+    width: 400px;
+    height: 400px;
+  }
+  .reticleCircleElmp::before {
+    content: "";
+    width: var(--widthKlibrSize);
+    height: var(--heightKlibrSize);
+  }
+  .reticleCircleElmp::after {
+    content: "";
+    background-color: black;
+    width: var(--widthSize);
+    height: var(--heightSize);
+  }
+  .circle-range {
+    width: calc(150vw / 3.6);
+    height: calc(150vw / 3.6);
+  }
+  .ulMainMenu {
+    right: -40%;
+  }
+  .ulMainMenu li ul {
+    width: 150%;
+    height: 50vh;
+    right: 100%;
+    top: 1%;
+  }
+  .MinModalFooter {
+    height: 95vh;
+  }
+  .divNumberStep {
+    width: calc(20vw / 2.5);
+    height: calc(20vw / 2.5);
+    border-radius: 50%;
+  }
+  .imgWindLine {
+    width: 40%;
+    margin-left: -70px;
+  }
+  .lineStepsWind {
+    position: relative;
+  }
+  .lineStepsWind .stepNumberLine {
+    height: 5vw;
+    left: -3.75vw;
+  }
+  .lineStepsWind .stepNumberLine::after {
+    top: -10px;
+    right: -0.5vw;
+    width: calc(7vw / 2.5);
+    height: calc(7vw / 2.5);
+  }
+  .colOFModal {
+    height: 100%;
+  }
+  #StepTow1Doted {
+    bottom: 84%;
+  }
+  #StepTow2Doted {
+    bottom: 64%;
+  }
+  #StepTow3Doted {
+    bottom: 44%;
+  }
+  #StepTow4Doted {
+    bottom: 24%;
+  }
+  #StepTow5Doted {
+    bottom: 5%;
+  }
+  .labalePercentageDriftForSteps {
+    height: 50%;
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .divImg {
+    top: 10%;
+  }
+  .divImg img {
+    width: 420px;
+    height: 420px;
+  }
+  .reticleCircleElmp::before {
+    content: "";
+    width: var(--widthKlibrSize);
+    height: var(--heightKlibrSize);
+  }
+  .reticleCircleElmp::after {
+    content: "";
+    background-color: black;
+    width: var(--widthSize);
+    height: var(--heightSize);
+  }
+  .circle-range {
+    width: calc(150vw / 3.8);
+    height: calc(150vw / 3.8);
+  }
+  .imgWindLine {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 763px) {
+  .divImg {
+    top: 5%;
+  }
+  .divImg img {
+    width: 420px;
+    height: 420px;
+  }
+  .reticleCircleElmp::before {
+    content: "";
+    width: var(--widthKlibrSize);
+    height: var(--heightKlibrSize);
+  }
+  .reticleCircleElmp::after {
+    content: "";
+    background-color: black;
+    width: var(--widthSize);
+    height: var(--heightSize);
+  }
+  .circle-range {
+    width: calc(150vw / 3.8);
+    height: calc(150vw / 3.8);
+  }
+  #Step1Doted {
+    top: 5%;
+  }
+  #Step2Doted {
+    top: 25%;
+  }
+  #Step3Doted {
+    top: 45%;
+  }
+  #Step4Doted {
+    top: 65%;
+  }
+  #Step5Doted {
+    top: 85%;
+  }
+  #StepTow1Doted {
+    bottom: 82%;
+  }
+  #StepTow2Doted {
+    bottom: 63%;
+  }
+  #StepTow3Doted {
+    bottom: 45%;
+  }
+  #StepTow4Doted {
+    bottom: 25%;
+  }
+  #StepTow5Doted {
+    bottom: 5%;
+  }
+  .imgWindLine {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .circle-range {
+    width: calc(150vw / 4);
+    height: calc(150vw / 4);
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .circle-range {
+    width: calc(150vw / 4.3);
+    height: calc(150vw / 4.3);
+  }
+  .lineStepsWind {
+    position: relative;
+  }
+  .lineStepsWind .stepNumberLine {
+    height: 5vw;
+    left: -3.5vw;
+  }
+  .lineStepsWind .stepNumberLine::after {
+    top: -10px;
+    right: -0.5vw;
+    width: calc(5vw / 2.5);
+    height: calc(5vw / 2.5);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .circle-range {
+    width: calc(150vw / 4.5);
+    height: calc(150vw / 4.5);
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .circle-range {
+    width: calc(150vw / 4.7);
+    height: calc(150vw / 4.7);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .circle-range {
+    width: calc(150vw / 5);
+    height: calc(150vw / 5);
+  }
+  .lineStepsWind {
+    position: relative;
+  }
+  .lineStepsWind .stepNumberLine {
+    height: 5vw;
+    left: -2.75vw;
+  }
+  .lineStepsWind .stepNumberLine::after {
+    top: -10px;
+    right: -0.5vw;
+    width: calc(5vw / 2.5);
+    height: calc(5vw / 2.5);
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .circle-range {
+    width: calc(150vw / 5.3);
+    height: calc(150vw / 5.3);
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .circle-range {
+    width: calc(150vw / 5.5);
+    height: calc(150vw / 5.5);
+  }
+  #Steplabale1 {
+    top: 0%;
+  }
+  .imgWindLine {
+    width: 60%;
+  }
+  #StepTow1Doted {
+    bottom: 83%;
+  }
+  #StepTow2Doted {
+    bottom: 64%;
+  }
+  #StepTow3Doted {
+    bottom: 45%;
+  }
+  #StepTow4Doted {
+    bottom: 25%;
+  }
+  #StepTow5Doted {
+    bottom: 5%;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .circle-range {
+    width: calc(150vw / 5.8);
+    height: calc(150vw / 5.8);
+  }
+  .divNumberStep {
+    width: calc(15vw / 2.5);
+    height: calc(15vw / 2.5);
+    border-radius: 50%;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .circle-range {
+    width: calc(150vw / 6.1);
+    height: calc(150vw / 6.1);
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+  .circle-range {
+    width: calc(150vw / 6.4);
+    height: calc(150vw / 6.4);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .circle-range {
+    width: calc(150vw / 6.7);
+    height: calc(150vw / 6.7);
+  }
+  .imgWindLine {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .circle-range {
+    width: calc(150vw / 7);
+    height: calc(150vw / 7);
+  }
+}
+
+@media only screen and (min-width: 1350px) {
+  .circle-range {
+    width: calc(150vw / 7.5);
+    height: calc(150vw / 7.5);
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .circle-range {
+    width: calc(150vw / 8);
+    height: calc(150vw / 8);
+  }
+  .imgWindLine {
+    width: 40%;
+  }
+}
+
+.sectionDegree .mainDivDegree {
+  height: 55vh;
+}
+
+.sectionDegree .mainDivDegree .circle-range {
+  border: 2px solid white;
+  border-radius: 51%;
+  float: left;
+  margin: 6px;
+}
+
+.sectionDegree .mainDivDegree .circle-range .info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #3a83cc;
+  border-radius: inherit;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  color: white;
+  font-family: serif;
+  font-size: initial;
+  font-weight: bold;
+  line-height: 5rem;
+  user-select: none;
+  z-index: 10;
+}
+
+.sectionDegree .mainDivDegree .circle-range .topElmP {
+  color: black;
+  position: absolute;
+  width: 0.2vw;
+  height: 50%;
+  left: 49.5%;
+  top: 0;
+  transform: rotate(0deg);
+  transform-origin: center bottom;
+  background-color: #ffe600;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 2.5rem;
+  z-index: 4;
+}
+
+.sectionDegree .mainDivDegree .circle-range .topElmP::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  color: white;
+  border-top: 1rem solid red;
+}
+
+.sectionDegree .mainDivDegree .circle-range .icon {
+  color: black;
+  position: absolute;
+  width: 0.5px;
+  height: 50%;
+  left: 49.5%;
+  top: 0;
+  transform: rotate(0deg);
+  transform-origin: center bottom;
+  background-color: #ffe600;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 2.5rem;
+  align-items: flex-start;
+}
+
+.sectionDegree .mainDivDegree .circle-range .icon::after {
+  content: "";
+  width: 5%;
+  height: 3%;
+  font-size: var(--fontMd);
+  border-left: 1vw solid #ffe600;
+  border-right: 1vw solid #ffe600;
+  color: white;
+}
+
+.sectionDegree .mainDivDegree .circle-range .bottomElmP {
+  color: black;
+  position: absolute;
+  width: 0.3vw;
+  height: 50%;
+  left: 49%;
+  right: 10%;
+  bottom: -7.2%;
+  transform: rotate(-0.5deg);
+  transform-origin: top center;
+  background-color: black;
+  display: flex;
+  color: white;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: end;
+  background-color: greenyellow;
+}
+
+.sectionDegree .mainDivDegree .circle-range .bottomElmP::after {
+  content: attr(data-value);
+  position: absolute;
+  left: 350%;
+}
+
+.sectionDegree .mainDivDegree .circle-range .labale {
+  z-index: 2;
+  color: white;
+  position: absolute;
+  width: 0%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  transform: rotate(360deg);
+  transform-origin: top center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  font-family: serif;
+  font-size: initial;
+  font-weight: bold;
+  user-select: none;
+  /* supported by Chrome and Opera */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+}
+
+.sectionDegree .mainDivDegree .circle-range .labale::after {
+  content: "";
+  width: 0.1vw;
+  height: 1vw;
+  margin: 1%;
+  background-color: white;
+  position: absolute;
+  bottom: 25%;
+  transform: rotate(0deg);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini::after {
+  content: "";
+  width: 0.1vw;
+  height: 0.5vw;
+  margin: 0%;
+  background-color: white;
+  position: absolute;
+  bottom: 29%;
+  transform: rotate(0deg);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini-main::after {
+  content: "";
+  width: 0.1vw;
+  height: 0.6vw;
+  margin: 0%;
+  background-color: white;
+  position: absolute;
+  bottom: 28%;
+  transform: rotate(0deg);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP1 {
+  transform: rotate(-150deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP1 P {
+  transform: rotate(150deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP1mini1 {
+  transform: rotate(-135deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini1-0 {
+  transform: rotate(-142.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini1-2 {
+  transform: rotate(-127.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini1-3 {
+  transform: rotate(-157.2deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP2 {
+  transform: rotate(-120deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP2 P {
+  transform: rotate(120deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP1mini2 {
+  transform: rotate(-105deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini2-0 {
+  transform: rotate(-112.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini2-2 {
+  transform: rotate(-127.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP3 {
+  transform: rotate(-90deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP3::after {
+  content: "";
+  width: 0.2vw;
+  height: 1vw;
+  margin: 1%;
+  background-color: white;
+  position: absolute;
+  bottom: 25%;
+  transform: rotate(0deg);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP3 P {
+  transform: rotate(90deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP1mini3 {
+  transform: rotate(-75deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini3-0 {
+  transform: rotate(-82.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini3-2 {
+  transform: rotate(-97.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP4 {
+  transform: rotate(-60deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP4 p {
+  transform: rotate(60deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP1mini4 {
+  transform: rotate(-45deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini4-0 {
+  transform: rotate(-52.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini4-2 {
+  transform: rotate(-67.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP5 {
+  transform: rotate(-30deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP5 p {
+  transform: rotate(30deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP1mini5 {
+  transform: rotate(-15deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini5-0 {
+  transform: rotate(-22.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini5-2 {
+  transform: rotate(-37.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP6 {
+  transform: rotate(0deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP6::after {
+  content: "";
+  width: 0.2vw;
+  height: 1vw;
+  margin: 1%;
+  background-color: white;
+  position: absolute;
+  bottom: 25%;
+  transform: rotate(0deg);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP1mini6 {
+  transform: rotate(15deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini6-0 {
+  transform: rotate(-7.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini6-2 {
+  transform: rotate(7.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP7 {
+  transform: rotate(30deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP7 p {
+  transform: rotate(-30deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP1mini7 {
+  transform: rotate(45deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini7-0 {
+  transform: rotate(22.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini7-2 {
+  transform: rotate(37.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP8 {
+  transform: rotate(60deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP8 p {
+  transform: rotate(-60deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP1mini8 {
+  transform: rotate(75deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini8-0 {
+  transform: rotate(52.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini8-2 {
+  transform: rotate(67.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP9 {
+  transform: rotate(90deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP9::after {
+  content: "";
+  width: 0.2vw;
+  height: 1vw;
+  margin: 1%;
+  background-color: white;
+  position: absolute;
+  bottom: 25%;
+  transform: rotate(0deg);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP9 p {
+  transform: rotate(-90deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP1mini9 {
+  transform: rotate(105deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini9-0 {
+  transform: rotate(82.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini9-2 {
+  transform: rotate(97.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP10 {
+  transform: rotate(120deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP10 p {
+  transform: rotate(-120deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP1mini10 {
+  transform: rotate(135deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini10-0 {
+  transform: rotate(112.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini10-2 {
+  transform: rotate(127.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP11 {
+  transform: rotate(150deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP11 P {
+  transform: rotate(-150deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP1mini11 {
+  transform: rotate(165deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini11-0 {
+  transform: rotate(142.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini11-2 {
+  transform: rotate(157.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP12 {
+  transform: rotate(180deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP12::after {
+  content: "";
+  width: 0.2vw;
+  height: 1vw;
+  margin: 1%;
+  background-color: white;
+  position: absolute;
+  bottom: 25%;
+  transform: rotate(0deg);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP12 P {
+  transform: rotate(180deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .ElmP1mini12 {
+  transform: rotate(-165deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini12-0 {
+  transform: rotate(172.5deg);
+}
+
+.sectionDegree .mainDivDegree .circle-range .labalemini12-2 {
+  transform: rotate(187.5deg);
+}
+
+.btnCalacModal:hover {
+  background-color: aqua;
+}
+
+.MinModal {
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100vh;
+  z-index: 12;
+  position: absolute;
+}
+
+.MinModal .calcMaindivMaincard input {
+  width: 10%;
+}
+
+.divBtnFooter {
+  position: absolute;
+  left: 5%;
+  bottom: 25.5%;
+}
+
+.lineStepsWind {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.lineStepsWind .stepNumberLine {
+  border-left: 7px dotted white;
+  rotate: 90deg;
+  position: absolute;
+}
+
+.lineStepsWind .stepNumberLine::after {
+  background-color: red;
+  content: " ";
+  border-radius: 50%;
+  position: absolute;
+}
+
+.lineStepsWind2 {
+  position: relative;
+  border-right: 7px dotted white;
+}
+
+.lineStepsWind2 .stepNumberLine {
+  position: relative;
+  height: 100%;
+}
+
+.MinModalFooter {
+  overflow-y: scroll;
+}
+
+.divForBtnFooterModal {
+  margin-top: 10vh;
+}
+
+.steplabaleLine {
+  left: 15px;
+  position: absolute;
+}
+
+#Bench {
+  clip-path: polygon(11% 11%, 89% 11%, 87% 47%, 70% 60%, 70% 87%, 30% 88%, 29% 59%, 12% 47%);
+}
+
+@media only screen and (max-width: 450px) {
+  :root {
+    --fontsmModal: 4.5vw;
+    --fontboldModal: 4.75vw;
+    --fontxlModal: 1px;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  :root {
+    --fontsmModal: 2.25vw;
+    --fontboldModal: 2.5vw;
+    --fontxlModal: 1px;
+  }
+}
+
+.ulMainMenu {
+  position: absolute;
+  top: 100%;
+}
+
+.ulMainMenu li:hover {
+  background-color: #087fff;
+  cursor: pointer;
+}
+
+.ulMainMenu li ul {
+  overflow-y: scroll;
+  height: 30vh;
+}
+
+.ulMainMenu li ul li:hover {
+  background-color: #087fff;
+  cursor: pointer;
+}
+/*# sourceMappingURL=base.css.map */

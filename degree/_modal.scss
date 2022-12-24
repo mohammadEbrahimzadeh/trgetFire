@@ -1,0 +1,575 @@
+.sectionDegree {
+  .mainDivDegree {
+    height: 55vh;
+    .circle-range {
+      // width: calc(100vw / 3);
+      // height: calc(100vw / 3);
+      border: 2px solid white;
+      border-radius: 51%;
+      float: left;
+      margin: 6px;
+      .info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #3a83cc;
+        border-radius: inherit;
+        width: 5rem;
+        height: 5rem;
+        text-align: center;
+        color: white;
+        font-family: serif;
+        font-size: initial;
+        font-weight: bold;
+        line-height: 5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        z-index: 10;
+      }
+      .topElmP {
+        color: black;
+        position: absolute;
+        width: 0.2vw;
+        height: 50%;
+        left: 49.5%;
+        top: 0;
+        transform: rotate(0deg);
+        transform-origin: center bottom;
+        background-color: rgb(255, 230, 0);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 2.5rem;
+        z-index: 4;
+      }
+
+      .topElmP::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        color: white;
+        border-top: 1rem solid rgb(255, 0, 0);
+      }
+      .icon {
+        color: black;
+        position: absolute;
+        width: 0.5px;
+        height: 50%;
+        left: 49.5%;
+        top: 0;
+        transform: rotate(0deg);
+        transform-origin: center bottom;
+        background-color: rgb(255, 230, 0);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 2.5rem;
+        align-items: flex-start;
+        &::after {
+          content: "";
+          width: 5%;
+          height: 3%;
+          font-size: var(--fontMd);
+          border-left: 1vw solid rgb(255, 230, 0);
+          border-right: 1vw solid rgb(255, 230, 0);
+          color: white;
+        }
+      }
+      .bottomElmP {
+        color: black;
+        position: absolute;
+        width: 0.3vw;
+        height: 50%;
+        left: 49%;
+        right: 10%;
+        bottom: -7.2%;
+        transform: rotate(-0.5deg);
+        transform-origin: top center;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        color: white;
+        align-items: flex-end;
+        justify-content: flex-end;
+        text-align: end;
+        background-color: greenyellow;
+      }
+
+      .bottomElmP::after {
+        content: attr(data-value);
+        position: absolute;
+        left: 350%;
+      }
+      .labale {
+        z-index: 2;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        width: 0%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        bottom: 0;
+        transform: rotate(360deg);
+        transform-origin: top center;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+        font-family: serif;
+        font-size: initial;
+        font-weight: bold;
+        user-select: none;
+        /* supported by Chrome and Opera */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        &::after {
+          content: "";
+          width: 0.1vw;
+          height: 1vw;
+          margin: 1%;
+          background-color: white;
+          position: absolute;
+
+          bottom: 25%;
+          transform: rotate(0deg);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          vertical-align: bottom;
+        }
+      }
+      .labalemini {
+        &::after {
+          content: "";
+          width: 0.1vw;
+          height: 0.5vw;
+          margin: 0%;
+          background-color: rgb(255, 255, 255);
+          position: absolute;
+
+          bottom: 29%;
+          transform: rotate(0deg);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          vertical-align: bottom;
+        }
+      }
+      .labalemini-main {
+        &::after {
+          content: "";
+          width: 0.1vw;
+          height: 0.6vw;
+          margin: 0%;
+          background-color: white;
+          position: absolute;
+
+          bottom: 28%;
+          transform: rotate(0deg);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          vertical-align: bottom;
+        }
+      }
+
+      .ElmP1 {
+        transform: rotate(-150deg);
+      }
+
+      .ElmP1 P {
+        transform: rotate(150deg);
+      }
+
+      .ElmP1mini1 {
+        transform: rotate(-135deg);
+      }
+      .labalemini1-0 {
+        transform: rotate(-142.5deg);
+      }
+      .labalemini1-2 {
+        transform: rotate(-127.5deg);
+      }
+      .labalemini1-3 {
+        transform: rotate(-157.2deg);
+      }
+      // ---------
+      .ElmP2 {
+        transform: rotate(-120deg);
+      }
+
+      .ElmP2 P {
+        transform: rotate(120deg);
+      }
+
+      .ElmP1mini2 {
+        transform: rotate(-105deg);
+      }
+      .labalemini2-0 {
+        transform: rotate(-112.5deg);
+      }
+      .labalemini2-2 {
+        transform: rotate(-127.5deg);
+      }
+      // -------------
+      .ElmP3 {
+        transform: rotate(-90deg);
+        &::after {
+          content: "";
+          width: 0.2vw;
+          height: 1vw;
+          margin: 1%;
+          background-color: white;
+          position: absolute;
+
+          bottom: 25%;
+          transform: rotate(0deg);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          vertical-align: bottom;
+        }
+      }
+
+      .ElmP3 P {
+        transform: rotate(90deg);
+      }
+
+      .ElmP1mini3 {
+        transform: rotate(-75deg);
+      }
+      .labalemini3-0 {
+        transform: rotate(-82.5deg);
+      }
+      .labalemini3-2 {
+        transform: rotate(-97.5deg);
+      }
+      //---------
+      .ElmP4 {
+        transform: rotate(-60deg);
+        p {
+          transform: rotate(60deg);
+        }
+      }
+
+      .ElmP1mini4 {
+        transform: rotate(-45deg);
+      }
+      .labalemini4-0 {
+        transform: rotate(-52.5deg);
+      }
+      .labalemini4-2 {
+        transform: rotate(-67.5deg);
+      }
+      // ------------
+      .ElmP5 {
+        transform: rotate(-30deg);
+        p {
+          transform: rotate(30deg);
+        }
+      }
+
+      .ElmP1mini5 {
+        transform: rotate(-15deg);
+      }
+      .labalemini5-0 {
+        transform: rotate(-22.5deg);
+      }
+      .labalemini5-2 {
+        transform: rotate(-37.5deg);
+      }
+      // ----------------
+      .ElmP6 {
+        transform: rotate(0deg);
+        &::after {
+          content: "";
+          width: 0.2vw;
+          height: 1vw;
+          margin: 1%;
+          background-color: white;
+          position: absolute;
+
+          bottom: 25%;
+          transform: rotate(0deg);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          vertical-align: bottom;
+        }
+      }
+
+      .ElmP1mini6 {
+        transform: rotate(15deg);
+      }
+      .labalemini6-0 {
+        transform: rotate(-7.5deg);
+      }
+      .labalemini6-2 {
+        transform: rotate(7.5deg);
+      }
+      // ----------------
+      .ElmP7 {
+        transform: rotate(30deg);
+        p {
+          transform: rotate(-30deg);
+        }
+      }
+
+      .ElmP1mini7 {
+        transform: rotate(45deg);
+      }
+      .labalemini7-0 {
+        transform: rotate(22.5deg);
+      }
+      .labalemini7-2 {
+        transform: rotate(37.5deg);
+      }
+      // ----------------
+      .ElmP8 {
+        transform: rotate(60deg);
+        p {
+          transform: rotate(-60deg);
+        }
+      }
+
+      .ElmP1mini8 {
+        transform: rotate(75deg);
+      }
+      .labalemini8-0 {
+        transform: rotate(52.5deg);
+      }
+      .labalemini8-2 {
+        transform: rotate(67.5deg);
+      }
+      // ----------------
+      .ElmP9 {
+        transform: rotate(90deg);
+        &::after {
+          content: "";
+          width: 0.2vw;
+          height: 1vw;
+          margin: 1%;
+          background-color: white;
+          position: absolute;
+
+          bottom: 25%;
+          transform: rotate(0deg);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          vertical-align: bottom;
+        }
+        p {
+          transform: rotate(-90deg);
+        }
+      }
+
+      .ElmP1mini9 {
+        transform: rotate(105deg);
+      }
+
+      .labalemini9-0 {
+        transform: rotate(82.5deg);
+      }
+      .labalemini9-2 {
+        transform: rotate(97.5deg);
+      }
+      // ----------------
+      .ElmP10 {
+        transform: rotate(120deg);
+        p {
+          transform: rotate(-120deg);
+        }
+      }
+
+      .ElmP1mini10 {
+        transform: rotate(135deg);
+      }
+
+      .labalemini10-0 {
+        transform: rotate(112.5deg);
+      }
+      .labalemini10-2 {
+        transform: rotate(127.5deg);
+      }
+      // ----------------
+
+      .ElmP11 {
+        transform: rotate(150deg);
+        P {
+          transform: rotate(-150deg);
+        }
+      }
+
+      .ElmP1mini11 {
+        transform: rotate(165deg);
+      }
+      .labalemini11-0 {
+        transform: rotate(142.5deg);
+      }
+      .labalemini11-2 {
+        transform: rotate(157.5deg);
+      }
+      // ----------------
+
+      .ElmP12 {
+        transform: rotate(180deg);
+        &::after {
+          content: "";
+          width: 0.2vw;
+          height: 1vw;
+          margin: 1%;
+          background-color: white;
+          position: absolute;
+
+          bottom: 25%;
+          transform: rotate(0deg);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          vertical-align: bottom;
+        }
+      }
+
+      .ElmP12 P {
+        transform: rotate(180deg);
+      }
+
+      .ElmP1mini12 {
+        transform: rotate(-165deg);
+      }
+      .labalemini12-0 {
+        transform: rotate(172.5deg);
+      }
+      .labalemini12-2 {
+        transform: rotate(187.5deg);
+      }
+    }
+  }
+}
+.btnCalacModal {
+  &:hover {
+    background-color: aqua;
+  }
+}
+// -----------------
+.MinModal {
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100vh;
+  z-index: 12;
+  position: absolute;
+  .calcMaindivMaincard {
+    input {
+      width: 10%;
+    }
+  }
+}
+
+.divBtnFooter {
+  position: absolute;
+  left: 5%;
+  bottom: 25.5%;
+}
+.lineStepsWind {
+  position: relative;
+  top: 0;
+  left: 0;
+  .stepNumberLine {
+    border-left: 7px dotted white;
+    rotate: 90deg;
+    position: absolute;
+
+    &::after {
+      background-color: red;
+      content: " ";
+      border-radius: 50%;
+      position: absolute;
+    }
+  }
+}
+
+.lineStepsWind2 {
+  position: relative;
+
+  border-right: 7px dotted white;
+  .stepNumberLine {
+    position: relative;
+
+    height: 100%;
+  }
+}
+
+.MinModalFooter {
+  overflow-y: scroll;
+}
+.divForBtnFooterModal {
+  margin-top: 10vh;
+}
+.steplabaleLine {
+  left: 15px;
+
+  position: absolute;
+}
+#Bench {
+  -webkit-clip-path: polygon(
+    11% 11%,
+    89% 11%,
+    87% 47%,
+    70% 60%,
+    70% 87%,
+    30% 88%,
+    29% 59%,
+    12% 47%
+  );
+  clip-path: polygon(
+    11% 11%,
+    89% 11%,
+    87% 47%,
+    70% 60%,
+    70% 87%,
+    30% 88%,
+    29% 59%,
+    12% 47%
+  );
+}
+@media only screen and (max-width: 450px) {
+  :root {
+    --fontsmModal: 4.5vw;
+    --fontboldModal: 4.75vw;
+    --fontxlModal: 1px;
+  }
+}
+@media only screen and (min-width: 450px) {
+  :root {
+    --fontsmModal: 2.25vw;
+    --fontboldModal: 2.5vw;
+    --fontxlModal: 1px;
+  }
+}
